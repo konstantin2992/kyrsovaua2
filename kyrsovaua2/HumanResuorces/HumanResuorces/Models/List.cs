@@ -55,15 +55,21 @@ namespace HumanResuorces.Models
             // Повернення результатів пошуку
             return result;
         }
+        // Метод для збереження даних у файл
         public void SaveData(string path)
         {
+            // Серіалізація об'єкта List у JSON-рядок
             var jsonString = JsonSerializer.Serialize(this);
+            // Запис JSON-рядка у файл
             File.WriteAllText(path, jsonString);
         }
 
+        // Метод для завантаження даних з файлу
         public List LoadData(string path)
         {
+            // Читання JSON-рядка з файлу
             var jsonString = File.ReadAllText(path);
+            // Десеріалізація JSON-рядка у об'єкт List
             return JsonSerializer.Deserialize<List>(jsonString);
         }
         public List<Employee> SelectForRetirement(int retirementAge)

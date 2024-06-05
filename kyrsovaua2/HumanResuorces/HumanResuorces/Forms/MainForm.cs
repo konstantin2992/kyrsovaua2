@@ -73,10 +73,12 @@ namespace HumanResuorces.Forms
             }
         }
         const string PATH_TO_DATA = ".//employee.txt";
+        // Обробник події для збереження даних у файл
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (list.Employees.Count > 0)
             {
+                // Виклик методу для збереження даних
                 list.SaveData(PATH_TO_DATA);
             }
             else
@@ -85,8 +87,10 @@ namespace HumanResuorces.Forms
             }
         }
 
+        // Обробник події для завантаження даних з файлу
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Виклик методу для завантаження даних
             list = list.LoadData(PATH_TO_DATA);
             addnewEmployee.Enabled = true;
             deleteEmployee.Enabled = true;
@@ -212,7 +216,7 @@ namespace HumanResuorces.Forms
                                           "у меню і натиснути кнопку 'Зберегти', щоб зберегти всі зміни у файл. Після цього можна " +
                                           "закривати програму.";
 
-            MessageBox.Show(notificationText, "Про програму", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(notificationText, "Інформація про програму", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)

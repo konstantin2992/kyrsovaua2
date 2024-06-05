@@ -221,6 +221,7 @@
             birthdateBox.Name = "birthdateBox";
             birthdateBox.Size = new Size(238, 27);
             birthdateBox.TabIndex = 9;
+            birthdateBox.TextChanged += birthdateBox_TextChanged;
             birthdateBox.Validating += birthdateBox_Validating;
             // 
             // dlaBox

@@ -288,5 +288,10 @@ namespace HumanResuorces.Forms
         {
 
         }
+
+        private void birthdateBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
